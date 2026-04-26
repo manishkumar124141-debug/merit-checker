@@ -1,0 +1,472 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); color: var(--color-text-primary); }
+  #root { padding: 1.5rem 0; }
+  h2.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+  .header { margin-bottom: 2rem; }
+  .header h1 { font-size: 22px; font-weight: 500; letter-spacing: -0.3px; }
+  .header p { font-size: 14px; color: var(--color-text-secondary); margin-top: 4px; }
+  .tab-bar { display: flex; gap: 2px; margin-bottom: 1.5rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .tab { padding: 8px 16px; font-size: 13px; font-weight: 500; border: none; background: none; color: var(--color-text-secondary); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -0.5px; transition: color 0.15s; }
+  .tab.active { color: var(--color-text-primary); border-bottom-color: var(--color-text-primary); }
+  .tab:hover:not(.active) { color: var(--color-text-primary); }
+  .panel { display: none; } .panel.active { display: block; }
+  .section-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+  textarea { width: 100%; min-height: 160px; resize: vertical; font-family: var(--font-mono); font-size: 12px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 10px; color: var(--color-text-primary); background: var(--color-background-secondary); line-height: 1.5; }
+  textarea:focus { outline: none; border-color: var(--color-border-primary); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field label { font-size: 12px; color: var(--color-text-secondary); }
+  input, select { font-family: var(--font-sans); font-size: 13px; }
+  select { background: var(--color-background-secondary); color: var(--color-text-primary); }
+  .candidate-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+  .avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .hired-badge { font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
+  .hired-yes { background: #EAF3DE; color: #3B6D11; }
+  .hired-no { background: #FCEBEB; color: #A32D2D; }
+  .btn { padding: 8px 20px; font-size: 13px; font-weight: 500; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: none; color: var(--color-text-primary); cursor: pointer; transition: background 0.15s; }
+  .btn:hover { background: var(--color-background-secondary); }
+  .btn-primary { background: var(--color-text-primary); color: var(--color-background-primary); border-color: var(--color-text-primary); }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-sm { padding: 5px 12px; font-size: 12px; }
+  .btn-danger { border-color: #A32D2D; color: #A32D2D; }
+  .btn-danger:hover { background: #FCEBEB; }
+  .action-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
+  .info-box { background: #E6F1FB; border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; color: #0C447C; margin-bottom: 1rem; border-left: 3px solid #378ADD; }
+  .info-box strong { font-weight: 500; }
+  .loading { display: flex; align-items: center; gap: 10px; padding: 2rem; justify-content: center; color: var(--color-text-secondary); font-size: 14px; }
+  .spinner { width: 20px; height: 20px; border: 2px solid var(--color-border-tertiary); border-top-color: var(--color-text-primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .score-row { display: grid; grid-template-columns: 180px 1fr 60px 80px; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .score-row:last-child { border-bottom: none; }
+  .score-dim { font-size: 13px; font-weight: 500; }
+  .score-bar-bg { height: 6px; background: var(--color-border-tertiary); border-radius: 3px; }
+  .score-bar { height: 6px; border-radius: 3px; transition: width 0.6s ease; }
+  .score-val { font-size: 13px; font-weight: 500; text-align: right; }
+  .score-verdict { font-size: 11px; padding: 2px 8px; border-radius: 20px; text-align: center; font-weight: 500; }
+  .verdict-biased { background: #FCEBEB; color: #A32D2D; }
+  .verdict-caution { background: #FAEEDA; color: #854F0B; }
+  .verdict-fair { background: #EAF3DE; color: #3B6D11; }
+  .overall-score { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); margin-bottom: 1rem; }
+  .big-score { font-size: 56px; font-weight: 500; line-height: 1; }
+  .big-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 4px; }
+  .findings { margin-top: 1rem; }
+  .finding-item { padding: 12px 14px; border-left: 3px solid; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; margin-bottom: 8px; font-size: 13px; line-height: 1.6; }
+  .finding-bias { border-color: #E24B4A; background: #FCEBEB; color: #501313; }
+  .finding-caution { border-color: #EF9F27; background: #FAEEDA; color: #412402; }
+  .finding-fair { border-color: #639922; background: #EAF3DE; color: #173404; }
+  .finding-title { font-weight: 500; margin-bottom: 2px; }
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 1rem; }
+  .metric-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
+  .metric-label { font-size: 12px; color: var(--color-text-secondary); }
+  .metric-val { font-size: 22px; font-weight: 500; margin-top: 2px; }
+  .reco-section { margin-top: 1rem; }
+  .reco-item { display: flex; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; line-height: 1.5; }
+  .reco-item:last-child { border-bottom: none; }
+  .reco-num { width: 20px; height: 20px; border-radius: 50%; background: var(--color-text-primary); color: var(--color-background-primary); font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .empty-state { text-align: center; padding: 3rem 1rem; color: var(--color-text-secondary); font-size: 14px; }
+  .candidate-info { flex: 1; min-width: 0; }
+  .candidate-name { font-size: 13px; font-weight: 500; }
+  .candidate-meta { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .del-btn { background: none; border: none; cursor: pointer; color: var(--color-text-secondary); font-size: 16px; padding: 2px 6px; border-radius: 4px; }
+  .del-btn:hover { background: var(--color-background-danger); color: var(--color-text-danger); }
+  .note { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; }
+</style>
+
+<div id="root">
+  <h2 class="sr-only">HR Hiring Bias Detection Tool — enter candidate data to audit for potential bias across age, gender, race, and other protected characteristics.</h2>
+
+  <div class="header">
+    <h1>Hiring Bias Detector</h1>
+    <p>Audit your hiring decisions for unconscious bias across all protected characteristics</p>
+  </div>
+
+  <div class="tab-bar">
+    <button class="tab active" onclick="switchTab('input')">Candidate data</button>
+    <button class="tab" onclick="switchTab('report')" id="report-tab">Bias report</button>
+  </div>
+
+  <div id="panel-input" class="panel active">
+    <div class="info-box">
+      <strong>How this works:</strong> Add candidates with their demographic details and whether they were hired. The AI analyzes patterns across your decisions to detect potential bias — remember, bias stems from our own knowledge and assumptions, not from the candidates themselves.
+    </div>
+
+    <div class="card">
+      <div class="section-label">Add candidate</div>
+      <div class="row">
+        <div class="field"><label>Full name</label><input type="text" id="f-name" placeholder="e.g. Priya Sharma"></div>
+        <div class="field"><label>Age</label><input type="number" id="f-age" min="18" max="70" placeholder="e.g. 34"></div>
+      </div>
+      <div class="row-3">
+        <div class="field"><label>Gender</label>
+          <select id="f-gender">
+            <option value="">Select...</option>
+            <option>Male</option><option>Female</option><option>Non-binary</option>
+            <option>Transgender male</option><option>Transgender female</option><option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field"><label>Race / Ethnicity</label>
+          <select id="f-race">
+            <option value="">Select...</option>
+            <option>Asian</option><option>Black or African American</option>
+            <option>Hispanic or Latino</option><option>Middle Eastern</option>
+            <option>Native American</option><option>Pacific Islander</option>
+            <option>White or Caucasian</option><option>Mixed / Multiracial</option><option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field"><label>Religion</label>
+          <select id="f-religion">
+            <option value="">Select...</option>
+            <option>Buddhism</option><option>Christianity</option><option>Hinduism</option>
+            <option>Islam</option><option>Judaism</option><option>Sikhism</option>
+            <option>Atheist / None</option><option>Other</option><option>Prefer not to say</option>
+          </select>
+        </div>
+      </div>
+      <div class="row-3">
+        <div class="field"><label>Education level</label>
+          <select id="f-edu">
+            <option value="">Select...</option>
+            <option>High school</option><option>Some college</option><option>Associate's degree</option>
+            <option>Bachelor's degree</option><option>Master's degree</option><option>PhD / Doctorate</option>
+            <option>Professional degree</option><option>Vocational / Trade</option>
+          </select>
+        </div>
+        <div class="field"><label>Disability status</label>
+          <select id="f-disability">
+            <option value="">Select...</option>
+            <option>No disability</option><option>Physical disability</option>
+            <option>Visual impairment</option><option>Hearing impairment</option>
+            <option>Cognitive / Neurological</option><option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field"><label>Nationality / Origin</label>
+          <input type="text" id="f-nation" placeholder="e.g. Indian, American...">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Role applied for</label><input type="text" id="f-role" placeholder="e.g. Software Engineer"></div>
+        <div class="field"><label>Years of experience</label><input type="number" id="f-exp" min="0" max="50" placeholder="e.g. 5"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Hiring decision</label>
+          <select id="f-hired">
+            <option value="Hired">Hired</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Shortlisted">Shortlisted</option>
+            <option value="On hold">On hold</option>
+          </select>
+        </div>
+        <div class="field"><label>Notes (optional)</label><input type="text" id="f-notes" placeholder="Interviewer comments..."></div>
+      </div>
+      <div class="action-row">
+        <button class="btn btn-primary" onclick="addCandidate()">Add candidate</button>
+        <button class="btn btn-sm" onclick="loadSampleData()">Load sample data ↗</button>
+        <span class="note" id="add-msg"></span>
+      </div>
+    </div>
+
+    <div id="candidate-list"></div>
+
+    <div class="action-row" style="justify-content: flex-end; margin-top: 4px;">
+      <button class="btn" onclick="clearAll()" id="clear-btn" style="display:none;">Clear all</button>
+      <button class="btn btn-primary" onclick="runAnalysis()" id="analyze-btn" style="display:none;">Analyze for bias ↗</button>
+    </div>
+  </div>
+
+  <div id="panel-report" class="panel">
+    <div id="report-content">
+      <div class="empty-state">No report yet — add candidates and run analysis first.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let candidates = [];
+let reportData = null;
+
+const avatarColors = ['#E6F1FB','#EAF3DE','#FAEEDA','#FBEAF0','#E1F5EE','#EEEDFE'];
+const avatarText = ['#0C447C','#27500A','#633806','#72243E','#085041','#3C3489'];
+
+function getInitials(name) {
+  return name.split(' ').map(p => p[0]).join('').toUpperCase().slice(0,2);
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.querySelectorAll('.tab')[tab === 'input' ? 0 : 1].classList.add('active');
+}
+
+function addCandidate() {
+  const name = document.getElementById('f-name').value.trim();
+  if (!name) { showMsg('Name is required', 'error'); return; }
+  const candidate = {
+    id: Date.now(),
+    name,
+    age: document.getElementById('f-age').value || 'Unknown',
+    gender: document.getElementById('f-gender').value || 'Not specified',
+    race: document.getElementById('f-race').value || 'Not specified',
+    religion: document.getElementById('f-religion').value || 'Not specified',
+    education: document.getElementById('f-edu').value || 'Not specified',
+    disability: document.getElementById('f-disability').value || 'Not specified',
+    nationality: document.getElementById('f-nation').value.trim() || 'Not specified',
+    role: document.getElementById('f-role').value.trim() || 'Not specified',
+    experience: document.getElementById('f-exp').value || 'Unknown',
+    decision: document.getElementById('f-hired').value,
+    notes: document.getElementById('f-notes').value.trim()
+  };
+  candidates.push(candidate);
+  clearForm();
+  renderCandidates();
+  showMsg('Candidate added', 'ok');
+}
+
+function clearForm() {
+  ['f-name','f-age','f-gender','f-race','f-religion','f-edu','f-disability','f-nation','f-role','f-exp','f-notes'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = el.tagName === 'SELECT' ? (el.id === 'f-hired' ? 'Hired' : '') : '';
+  });
+}
+
+function deleteCandidate(id) {
+  candidates = candidates.filter(c => c.id !== id);
+  renderCandidates();
+}
+
+function clearAll() {
+  candidates = [];
+  renderCandidates();
+}
+
+function showMsg(txt, type) {
+  const el = document.getElementById('add-msg');
+  el.textContent = txt;
+  el.style.color = type === 'error' ? '#A32D2D' : '#3B6D11';
+  setTimeout(() => el.textContent = '', 2000);
+}
+
+function renderCandidates() {
+  const el = document.getElementById('candidate-list');
+  const analyzeBtn = document.getElementById('analyze-btn');
+  const clearBtn = document.getElementById('clear-btn');
+  
+  if (candidates.length === 0) {
+    el.innerHTML = '';
+    analyzeBtn.style.display = 'none';
+    clearBtn.style.display = 'none';
+    return;
+  }
+
+  analyzeBtn.style.display = 'inline-block';
+  clearBtn.style.display = 'inline-block';
+
+  el.innerHTML = `
+    <div class="section-label">${candidates.length} candidate${candidates.length !== 1 ? 's' : ''} added</div>
+    ${candidates.map((c, i) => {
+      const ci = i % avatarColors.length;
+      const decClass = c.decision === 'Hired' ? 'hired-yes' : (c.decision === 'Rejected' ? 'hired-no' : 'hired-caution');
+      return `<div class="candidate-card">
+        <div class="avatar" style="background:${avatarColors[ci]};color:${avatarText[ci]}">${getInitials(c.name)}</div>
+        <div class="candidate-info">
+          <div class="candidate-name">${c.name}</div>
+          <div class="candidate-meta">Age ${c.age} · ${c.gender} · ${c.race} · ${c.education} · ${c.experience} yrs exp · ${c.role}</div>
+        </div>
+        <span class="hired-badge ${decClass}">${c.decision}</span>
+        <button class="del-btn" onclick="deleteCandidate(${c.id})">×</button>
+      </div>`;
+    }).join('')}
+  `;
+}
+
+function loadSampleData() {
+  candidates = [
+    { id: 1, name: 'James Whitfield', age: 28, gender: 'Male', race: 'White or Caucasian', religion: 'Christianity', education: "Bachelor's degree", disability: 'No disability', nationality: 'American', role: 'Software Engineer', experience: 4, decision: 'Hired', notes: 'Strong communication skills' },
+    { id: 2, name: 'Priya Sharma', age: 31, gender: 'Female', race: 'Asian', religion: 'Hinduism', education: "Master's degree", disability: 'No disability', nationality: 'Indian', role: 'Software Engineer', experience: 7, decision: 'Rejected', notes: 'Accent was noticeable' },
+    { id: 3, name: 'Marcus Johnson', age: 26, gender: 'Male', race: 'Black or African American', religion: 'Christianity', education: "Bachelor's degree", disability: 'No disability', nationality: 'American', role: 'Software Engineer', experience: 3, decision: 'Rejected', notes: 'Not a culture fit' },
+    { id: 4, name: 'Emily Chen', age: 29, gender: 'Female', race: 'Asian', religion: 'Atheist / None', education: "Master's degree", disability: 'No disability', nationality: 'American', role: 'Software Engineer', experience: 5, decision: 'Hired', notes: 'Good team player' },
+    { id: 5, name: 'Robert Olson', age: 52, gender: 'Male', race: 'White or Caucasian', religion: 'Christianity', education: "Bachelor's degree", disability: 'No disability', nationality: 'American', role: 'Software Engineer', experience: 22, decision: 'Rejected', notes: 'May not adapt to fast pace' },
+    { id: 6, name: 'Fatima Al-Hassan', age: 34, gender: 'Female', race: 'Middle Eastern', religion: 'Islam', education: "Master's degree", disability: 'No disability', nationality: 'Saudi Arabian', role: 'Software Engineer', experience: 8, decision: 'Rejected', notes: 'Scheduling conflicts' },
+    { id: 7, name: 'Carlos Rivera', age: 27, gender: 'Male', race: 'Hispanic or Latino', religion: 'Christianity', education: "Bachelor's degree", disability: 'No disability', nationality: 'Mexican', role: 'Software Engineer', experience: 4, decision: 'Shortlisted', notes: '' },
+    { id: 8, name: 'Sarah Thompson', age: 38, gender: 'Female', race: 'White or Caucasian', religion: 'Christianity', education: "Bachelor's degree", disability: 'Physical disability', nationality: 'British', role: 'Software Engineer', experience: 12, decision: 'Rejected', notes: 'Concerned about attendance' },
+    { id: 9, name: 'Wei Zhang', age: 24, gender: 'Male', race: 'Asian', religion: 'Atheist / None', education: "Master's degree", disability: 'No disability', nationality: 'Chinese', role: 'Software Engineer', experience: 2, decision: 'Hired', notes: 'Excellent test scores' },
+    { id: 10, name: 'Amanda Brooks', age: 32, gender: 'Female', race: 'White or Caucasian', religion: 'Christianity', education: "Bachelor's degree", disability: 'No disability', nationality: 'American', role: 'Software Engineer', experience: 6, decision: 'Hired', notes: 'Great attitude' },
+  ];
+  renderCandidates();
+  showMsg('Sample data loaded', 'ok');
+}
+
+async function runAnalysis() {
+  if (candidates.length < 3) {
+    showMsg('Add at least 3 candidates for meaningful analysis', 'error');
+    return;
+  }
+  switchTab('report');
+  document.getElementById('report-content').innerHTML = `
+    <div class="loading"><div class="spinner"></div> Analyzing hiring patterns for bias...</div>
+  `;
+
+  const dataStr = candidates.map(c =>
+    `Name: ${c.name} | Age: ${c.age} | Gender: ${c.gender} | Race: ${c.race} | Religion: ${c.religion} | Education: ${c.education} | Disability: ${c.disability} | Nationality: ${c.nationality} | Role: ${c.role} | Experience: ${c.experience} yrs | Decision: ${c.decision} | Notes: "${c.notes || 'none'}"`
+  ).join('\n');
+
+  const prompt = `You are a professional HR bias audit analyst. Analyze the following hiring data for patterns of potential bias. Remember: bias is rooted in the decision-maker's own knowledge, assumptions, and background — not in the candidates themselves.
+
+HIRING DATA:
+${dataStr}
+
+Analyze for bias across these dimensions: Age, Gender/Sex, Race/Ethnicity, Religion, Disability, Nationality/National Origin, Education Background.
+
+Respond ONLY with valid JSON (no markdown, no extra text) in this exact structure:
+{
+  "overallScore": <0-100, where 100 = fully fair, 0 = highly biased>,
+  "totalCandidates": <number>,
+  "hiredCount": <number>,
+  "rejectedCount": <number>,
+  "dimensions": [
+    {
+      "name": <dimension name>,
+      "score": <0-100, 100=fair>,
+      "verdict": <"Biased" | "Caution" | "Fair">,
+      "finding": <one concise sentence about what pattern was found>,
+      "detail": <2-3 sentences explaining the bias pattern, what knowledge/assumption might be driving it, and impact>
+    }
+  ],
+  "keyFindings": [
+    {
+      "type": <"bias" | "caution" | "fair">,
+      "title": <short title>,
+      "description": <2-3 sentence description>
+    }
+  ],
+  "recommendations": [
+    <actionable recommendation string>
+  ],
+  "summary": <2-3 sentence overall assessment>
+}`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content.map(b => b.text || '').join('');
+    const clean = text.replace(/```json|```/g, '').trim();
+    reportData = JSON.parse(clean);
+    renderReport(reportData);
+  } catch(e) {
+    document.getElementById('report-content').innerHTML = `
+      <div class="card" style="text-align:center; padding: 2rem; color: var(--color-text-danger);">
+        Analysis failed. Please try again.<br><small style="color:var(--color-text-secondary)">${e.message}</small>
+      </div>
+    `;
+  }
+}
+
+function scoreColor(score) {
+  if (score >= 75) return '#639922';
+  if (score >= 50) return '#EF9F27';
+  return '#E24B4A';
+}
+
+function scoreTextColor(score) {
+  if (score >= 75) return '#3B6D11';
+  if (score >= 50) return '#854F0B';
+  return '#A32D2D';
+}
+
+function verdictClass(v) {
+  if (v === 'Fair') return 'verdict-fair';
+  if (v === 'Caution') return 'verdict-caution';
+  return 'verdict-biased';
+}
+
+function findingClass(t) {
+  if (t === 'fair') return 'finding-fair';
+  if (t === 'caution') return 'finding-caution';
+  return 'finding-bias';
+}
+
+function renderReport(r) {
+  const overallColor = scoreColor(r.overallScore);
+  const overallTextColor = scoreTextColor(r.overallScore);
+  const hireRate = r.totalCandidates > 0 ? Math.round((r.hiredCount / r.totalCandidates) * 100) : 0;
+
+  document.getElementById('report-content').innerHTML = `
+    <div style="display:grid; grid-template-columns: 180px 1fr; gap: 1rem; margin-bottom: 1rem;">
+      <div class="overall-score">
+        <div class="big-score" style="color:${overallTextColor}">${r.overallScore}</div>
+        <div class="big-label">Fairness score / 100</div>
+        <div style="margin-top:8px; font-size:12px; font-weight:500; color:${overallTextColor}">
+          ${r.overallScore >= 75 ? 'Largely fair' : r.overallScore >= 50 ? 'Some concerns' : 'Bias detected'}
+        </div>
+      </div>
+      <div>
+        <div class="summary-grid">
+          <div class="metric-card"><div class="metric-label">Candidates</div><div class="metric-val">${r.totalCandidates}</div></div>
+          <div class="metric-card"><div class="metric-label">Hired</div><div class="metric-val" style="color:#3B6D11">${r.hiredCount}</div></div>
+          <div class="metric-card"><div class="metric-label">Hire rate</div><div class="metric-val">${hireRate}%</div></div>
+        </div>
+        <div class="card" style="margin-bottom:0; font-size:13px; line-height:1.6; color:var(--color-text-secondary)">
+          ${r.summary}
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label" style="margin-bottom:4px">Bias scores by dimension</div>
+      <div style="font-size:12px; color:var(--color-text-secondary); margin-bottom:12px">Higher score = fairer outcomes in that dimension</div>
+      ${r.dimensions.map(d => `
+        <div class="score-row">
+          <div class="score-dim">${d.name}</div>
+          <div>
+            <div class="score-bar-bg"><div class="score-bar" style="width:${d.score}%;background:${scoreColor(d.score)}"></div></div>
+            <div style="font-size:11px; color:var(--color-text-secondary); margin-top:3px">${d.finding}</div>
+          </div>
+          <div class="score-val" style="color:${scoreTextColor(d.score)}">${d.score}</div>
+          <div class="score-verdict ${verdictClass(d.verdict)}">${d.verdict}</div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="card">
+      <div class="section-label">Key findings</div>
+      <div class="findings">
+        ${r.keyFindings.map(f => `
+          <div class="finding-item ${findingClass(f.type)}">
+            <div class="finding-title">${f.title}</div>
+            ${f.description}
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Recommendations to reduce bias</div>
+      <div class="reco-section">
+        ${r.recommendations.map((rec, i) => `
+          <div class="reco-item">
+            <div class="reco-num">${i+1}</div>
+            <div>${rec}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="action-row" style="margin-top:4px;">
+      <button class="btn" onclick="switchTab('input')">← Edit candidates</button>
+      <button class="btn btn-primary" onclick="runAnalysis()">Re-analyze ↗</button>
+    </div>
+  `;
+}
+</script>

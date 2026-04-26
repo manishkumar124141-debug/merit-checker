@@ -1,0 +1,501 @@
+Years_Experience,Education_Level,Technical_Score,Interview_Score,Merit_Score,Age,Gender,Race,Hired
+6,Master's,45.6,36.3,41.6,49,Female,White,0
+19,High School,63.4,55.9,54.2,54,Male,Other,0
+14,Master's,35.1,79.2,57.2,58,Male,Asian,1
+10,Master's,45.5,62.2,52.6,30,Male,White,1
+7,Master's,88.1,74.7,68.8,39,Female,Asian,0
+20,High School,84.8,71.1,67.0,42,Male,White,1
+6,Bachelor's,63.1,83.2,56.8,23,Male,White,0
+18,Bachelor's,58.0,79.1,63.4,59,Female,White,0
+22,Bachelor's,65.9,51.8,61.2,61,Female,White,0
+10,High School,100.0,71.4,64.4,57,Male,Black,1
+10,PhD,71.1,32.5,57.6,58,Male,White,0
+23,Bachelor's,78.6,59.0,68.6,36,Male,Hispanic,1
+20,Bachelor's,62.0,74.7,65.1,49,Male,Hispanic,1
+3,Bachelor's,65.9,62.4,49.2,39,Male,White,0
+7,Bachelor's,74.7,68.0,57.1,55,Female,Black,0
+23,Bachelor's,66.9,56.2,63.7,43,Female,Asian,0
+2,Bachelor's,36.5,80.3,43.5,32,Female,Hispanic,0
+21,Master's,84.2,58.6,73.8,34,Male,White,1
+20,Bachelor's,55.8,51.6,56.0,25,Female,Black,1
+1,PhD,96.7,76.0,72.4,43,Male,Asian,1
+23,Master's,75.3,34.7,65.2,28,Non-binary,White,0
+11,Bachelor's,66.1,69.0,57.6,45,Female,White,0
+5,PhD,71.6,41.2,56.4,25,Male,Black,1
+1,High School,63.4,83.0,47.9,49,Female,Black,0
+20,Master's,57.7,55.3,62.8,36,Male,White,1
+0,Bachelor's,68.1,62.4,47.6,22,Female,Asian,0
+11,Master's,78.3,67.4,66.4,24,Male,White,1
+21,Master's,58.0,25.3,54.7,35,Male,Black,0
+11,Master's,55.7,48.3,52.8,59,Female,White,0
+24,Master's,59.7,78.8,73.7,22,Male,Hispanic,1
+16,Bachelor's,79.3,75.6,68.2,59,Female,White,0
+9,High School,86.8,65.1,57.1,59,Male,White,1
+15,Bachelor's,70.4,35.7,52.4,42,Female,White,0
+14,Bachelor's,73.7,70.5,63.1,50,Female,White,0
+14,Master's,55.6,72.8,62.5,26,Male,Asian,1
+18,Bachelor's,78.2,60.8,65.0,31,Male,White,0
+11,PhD,73.3,82.0,74.1,49,Male,Hispanic,0
+22,Bachelor's,54.3,47.7,55.9,42,Male,White,0
+19,Master's,38.2,50.8,53.8,28,Male,White,0
+24,High School,46.7,15.3,40.1,24,Female,White,0
+2,Master's,55.0,76.6,53.8,41,Female,White,0
+4,Master's,82.4,65.6,61.7,40,Female,White,0
+18,Bachelor's,88.3,29.7,59.2,56,Female,White,0
+6,Bachelor's,58.4,28.3,38.7,25,Female,Asian,0
+20,Master's,58.9,44.3,59.9,26,Female,White,0
+8,Bachelor's,68.9,74.3,57.8,22,Male,Asian,0
+6,Bachelor's,65.2,54.6,49.0,25,Female,Asian,0
+17,Bachelor's,79.0,45.5,59.9,33,Female,White,1
+3,High School,57.2,41.9,35.0,48,Female,Asian,0
+24,Bachelor's,79.2,41.1,64.2,44,Male,Other,1
+13,High School,61.4,25.2,39.4,46,Male,Asian,0
+17,High School,77.8,38.3,52.3,42,Male,Black,0
+8,High School,60.9,40.7,39.9,45,Female,White,0
+20,PhD,55.8,72.3,72.2,46,Female,Black,0
+1,Bachelor's,93.7,57.0,55.7,53,Male,Black,0
+19,PhD,81.0,45.1,72.1,53,Non-binary,Asian,0
+14,Bachelor's,38.1,100.0,59.5,26,Male,Other,0
+6,Bachelor's,58.3,48.0,44.6,57,Male,White,0
+11,Bachelor's,83.1,81.0,67.2,60,Male,White,0
+7,Bachelor's,47.1,89.2,53.8,37,Female,Black,0
+14,High School,76.6,31.7,47.5,54,Female,Hispanic,0
+2,Bachelor's,75.0,61.3,51.2,42,Male,White,0
+13,Bachelor's,54.5,50.7,49.7,30,Female,White,0
+16,Bachelor's,64.9,49.2,55.3,27,Male,White,0
+3,Master's,33.6,70.0,45.2,56,Female,White,0
+17,Bachelor's,91.6,48.8,65.3,60,Female,Black,0
+7,High School,60.4,51.1,42.1,43,Female,Asian,0
+3,Master's,77.1,57.0,56.5,62,Male,White,1
+1,Bachelor's,74.2,53.3,47.8,26,Non-binary,White,0
+5,High School,85.4,38.9,45.6,44,Female,White,0
+21,PhD,58.5,74.3,74.6,38,Male,White,1
+9,High School,68.1,78.9,54.7,33,Female,Asian,0
+3,Master's,73.4,66.2,58.0,44,Male,Other,0
+21,PhD,78.1,53.2,75.1,37,Female,Hispanic,0
+17,Bachelor's,82.3,47.3,61.6,24,Male,White,0
+11,High School,57.8,47.3,43.2,51,Female,Hispanic,0
+1,High School,55.0,100.0,50.0,43,Female,Black,0
+9,Bachelor's,85.4,76.9,65.2,30,Male,Black,1
+3,High School,34.4,44.9,27.9,50,Male,Asian,0
+13,Master's,88.6,63.0,70.3,58,Male,White,1
+15,High School,60.5,53.5,49.2,44,Male,White,1
+14,Bachelor's,64.9,70.5,60.1,34,Male,White,1
+7,PhD,54.8,69.8,60.7,53,Female,White,1
+13,Master's,64.3,79.5,66.8,44,Male,White,0
+22,Bachelor's,84.1,44.7,65.4,38,Male,Asian,0
+24,Bachelor's,76.6,61.9,69.6,61,Female,Black,0
+7,Bachelor's,72.4,28.5,44.5,42,Male,Asian,0
+20,Bachelor's,66.3,37.4,55.4,23,Female,White,0
+15,Bachelor's,43.3,75.9,54.9,58,Female,Other,0
+12,High School,52.3,42.9,40.8,27,Female,Hispanic,1
+17,Master's,59.9,44.9,58.0,39,Female,Black,0
+14,Bachelor's,71.9,59.9,59.3,51,Female,Other,0
+20,Bachelor's,66.0,72.5,65.8,43,Male,Asian,1
+23,Bachelor's,79.8,40.9,63.6,54,Male,Other,0
+24,Bachelor's,72.1,10.0,52.4,51,Male,White,0
+12,Master's,65.8,44.3,55.9,38,Female,White,0
+8,Master's,99.1,81.7,75.6,53,Male,White,0
+14,Master's,71.1,66.2,65.9,35,Female,White,1
+12,High School,58.5,83.8,55.2,31,Non-binary,White,0
+0,Bachelor's,92.9,39.6,49.4,57,Female,Asian,0
+24,Bachelor's,83.0,30.5,62.4,55,Female,Black,0
+6,High School,92.2,68.3,57.6,30,Male,Asian,0
+8,Bachelor's,63.3,64.3,52.8,49,Female,White,1
+23,Master's,79.6,65.5,75.9,32,Female,Hispanic,0
+0,High School,43.2,76.8,38.2,35,Male,Asian,0
+11,Bachelor's,76.8,67.6,61.0,60,Male,White,0
+7,Bachelor's,62.6,67.3,52.7,40,Female,Black,0
+23,High School,44.7,72.9,55.9,36,Female,White,0
+10,Bachelor's,80.5,69.0,61.9,49,Female,White,1
+18,PhD,37.8,75.4,65.2,45,Female,Hispanic,0
+16,Master's,36.3,78.2,59.0,29,Female,White,1
+7,PhD,70.4,87.6,71.5,30,Male,Asian,0
+2,Bachelor's,73.6,48.3,46.8,54,Male,Hispanic,0
+2,High School,79.6,68.7,50.1,54,Male,Black,0
+0,Bachelor's,76.1,53.3,47.6,40,Male,White,0
+4,Bachelor's,87.1,45.0,52.2,24,Female,White,0
+9,Master's,75.5,47.6,57.9,31,Female,White,1
+6,High School,63.0,68.9,47.5,61,Female,Asian,0
+8,Bachelor's,63.9,67.5,54.0,22,Male,White,0
+6,Bachelor's,60.8,67.2,51.2,50,Female,White,0
+8,Bachelor's,69.4,55.9,52.5,55,Female,Other,0
+7,Master's,48.5,60.1,50.6,34,Female,Asian,1
+11,Bachelor's,70.1,74.7,60.7,22,Female,White,0
+1,Bachelor's,63.7,33.2,38.1,55,Male,Asian,0
+0,Bachelor's,69.1,60.4,47.3,50,Male,Black,0
+15,Bachelor's,69.2,61.6,59.7,34,Male,White,1
+22,Master's,28.2,73.6,59.6,50,Male,White,1
+22,Master's,51.5,35.7,56.3,60,Male,Hispanic,0
+23,PhD,63.4,86.9,81.7,45,Female,Asian,1
+4,Master's,64.2,63.8,54.8,47,Female,Asian,0
+2,Bachelor's,68.9,64.8,50.2,38,Female,White,0
+11,Master's,69.5,52.8,59.0,28,Female,White,0
+7,Bachelor's,87.7,69.7,62.2,34,Male,White,0
+21,Bachelor's,69.7,60.9,64.5,26,Female,White,0
+2,Master's,60.3,81.8,57.2,47,Male,White,0
+0,High School,41.0,34.1,24.6,24,Male,White,0
+2,Master's,44.5,63.2,46.1,28,Male,Hispanic,0
+4,Bachelor's,73.0,67.4,54.0,60,Male,Other,0
+14,Bachelor's,80.9,56.6,61.5,22,Male,Black,1
+13,Master's,88.1,52.7,67.0,38,Male,Hispanic,1
+2,Master's,52.6,53.5,46.1,46,Male,White,0
+0,Bachelor's,60.4,63.1,45.1,24,Non-binary,Other,0
+4,Bachelor's,68.6,27.4,40.4,36,Male,White,0
+22,High School,95.7,77.4,74.3,50,Male,Other,1
+13,Bachelor's,66.7,51.4,54.2,53,Male,Other,1
+6,Bachelor's,88.3,62.3,59.4,47,Female,Black,0
+8,Master's,67.5,66.6,60.0,37,Male,Other,0
+14,Bachelor's,82.3,50.5,60.2,46,Male,Asian,0
+14,Master's,80.4,57.6,66.6,49,Male,White,1
+9,High School,67.5,23.4,37.8,30,Male,White,0
+12,High School,49.7,73.2,49.0,22,Male,Asian,0
+18,Master's,61.0,79.4,69.6,50,Male,White,0
+6,High School,87.3,29.4,44.2,43,Male,Asian,0
+16,High School,78.2,52.7,56.0,37,Male,Other,1
+19,High School,58.5,37.9,47.0,62,Male,White,0
+3,PhD,59.9,56.8,55.4,62,Female,Black,0
+4,Master's,39.0,71.7,48.4,28,Female,Hispanic,0
+22,Bachelor's,86.7,77.8,76.3,35,Male,Hispanic,1
+6,Bachelor's,78.3,80.2,61.3,50,Male,Other,0
+12,Bachelor's,62.9,83.6,61.7,40,Female,Asian,1
+14,Master's,68.0,56.0,61.8,40,Male,Other,1
+10,Master's,32.4,39.4,41.2,23,Male,Black,0
+3,Bachelor's,57.7,57.9,45.0,62,Female,White,0
+12,Bachelor's,85.0,71.4,65.8,36,Male,Asian,1
+6,High School,79.7,37.9,44.1,24,Male,Black,0
+18,Master's,70.0,89.9,75.9,32,Male,White,0
+21,Master's,64.8,76.2,72.3,51,Female,Asian,1
+1,Bachelor's,76.9,56.3,49.6,61,Male,Black,0
+9,High School,60.8,47.2,42.6,39,Female,White,0
+12,High School,40.0,48.0,38.0,23,Non-binary,Asian,0
+24,PhD,64.9,61.3,75.3,53,Male,Black,0
+20,Bachelor's,71.0,55.9,62.6,29,Male,Asian,1
+5,Master's,81.8,77.1,65.8,43,Male,White,1
+11,Bachelor's,43.4,53.8,45.1,27,Male,White,1
+11,Bachelor's,63.2,69.1,56.6,33,Male,White,1
+19,Bachelor's,63.9,59.5,60.4,61,Female,Hispanic,0
+10,High School,48.5,64.9,44.4,57,Female,White,0
+22,Bachelor's,72.3,55.9,64.7,36,Female,Asian,1
+24,Master's,76.2,72.7,77.7,49,Male,White,1
+6,Bachelor's,60.6,73.0,52.9,39,Female,White,0
+0,Bachelor's,95.8,68.3,59.0,23,Female,Hispanic,1
+0,High School,60.2,70.9,42.3,34,Female,Black,1
+24,PhD,58.3,43.0,67.5,36,Male,White,1
+24,Master's,57.9,65.8,69.2,41,Female,White,0
+19,Bachelor's,52.8,82.5,63.4,50,Male,White,0
+12,PhD,56.6,68.8,65.0,50,Male,Asian,1
+8,Bachelor's,43.5,41.4,39.0,24,Male,Black,0
+2,Bachelor's,62.1,59.1,46.1,40,Female,White,0
+6,Master's,65.9,66.7,57.9,24,Female,White,1
+5,Master's,30.8,46.4,38.7,35,Male,White,0
+7,Master's,63.5,35.6,48.5,61,Male,Hispanic,0
+8,High School,65.6,54.3,45.6,25,Male,Other,0
+4,Bachelor's,72.7,46.7,47.7,32,Male,White,0
+0,Master's,83.1,59.7,57.0,52,Male,Black,0
+18,Bachelor's,77.8,31.4,56.0,53,Male,White,0
+9,Bachelor's,55.7,70.2,52.8,48,Female,White,0
+11,Bachelor's,54.0,48.6,47.3,51,Male,Black,0
+23,Bachelor's,73.7,77.9,72.6,23,Male,Hispanic,0
+14,Bachelor's,56.8,55.0,52.6,30,Male,Other,1
+21,PhD,46.6,59.5,66.0,49,Female,Asian,1
+23,Bachelor's,100.0,56.9,75.5,52,Female,White,1
+8,High School,60.3,47.6,41.8,55,Female,Black,0
+19,Bachelor's,55.6,100.0,69.7,36,Male,White,0
+16,Master's,32.1,51.1,49.4,46,Female,Asian,0
+16,Bachelor's,77.8,78.4,68.6,57,Male,White,0
+19,Bachelor's,50.2,40.3,49.9,29,Female,Black,0
+11,Master's,65.4,66.7,61.7,30,Female,White,0
+6,Master's,79.5,68.6,63.2,58,Female,White,1
+1,Master's,50.4,59.6,46.3,60,Female,Hispanic,0
+2,Master's,66.2,49.7,49.7,53,Female,White,0
+16,Bachelor's,87.9,55.3,65.2,38,Male,Asian,0
+4,Master's,28.1,52.7,38.8,56,Female,White,0
+16,Bachelor's,52.8,100.0,66.3,58,Male,White,1
+23,Master's,51.4,59.6,64.3,40,Female,White,0
+16,Master's,62.2,69.4,65.4,50,Male,White,0
+16,Master's,64.3,92.1,72.9,28,Male,Hispanic,1
+1,Master's,49.1,44.2,41.2,49,Male,White,0
+1,Bachelor's,55.2,60.7,43.3,30,Male,Other,0
+21,Bachelor's,53.4,55.2,57.0,49,Male,Asian,1
+22,PhD,59.7,58.4,71.0,27,Female,White,1
+4,PhD,68.3,56.8,59.1,50,Male,Asian,1
+0,High School,78.7,46.8,41.6,38,Male,Asian,0
+0,Bachelor's,80.8,63.5,52.3,37,Female,Black,1
+18,High School,74.8,40.9,52.8,44,Male,White,0
+1,Master's,51.9,77.8,52.3,52,Female,White,0
+20,Master's,65.0,71.2,70.1,24,Female,Hispanic,0
+11,Bachelor's,100.0,51.1,64.1,42,Female,Hispanic,1
+5,Bachelor's,80.2,52.0,52.7,47,Female,Hispanic,0
+22,Master's,58.4,65.0,67.5,57,Male,White,0
+3,Master's,88.7,45.6,57.1,58,Female,Black,0
+22,Bachelor's,59.2,92.6,71.1,43,Male,Asian,1
+10,Bachelor's,55.0,66.4,52.2,33,Male,Asian,0
+23,Bachelor's,85.9,67.1,73.6,34,Female,White,1
+16,Bachelor's,45.4,72.3,55.4,32,Male,Asian,1
+5,Bachelor's,36.3,49.6,36.6,37,Female,White,0
+23,Master's,79.1,79.6,80.0,29,Female,White,1
+4,Master's,65.4,62.1,54.7,61,Female,Hispanic,0
+19,Bachelor's,66.9,77.1,66.7,61,Female,White,1
+1,Master's,59.6,56.4,48.6,23,Male,White,0
+5,Bachelor's,61.4,83.7,55.6,51,Male,White,0
+21,Bachelor's,58.1,67.2,62.3,51,Female,Hispanic,0
+10,High School,55.6,99.3,57.2,33,Male,Asian,0
+15,Bachelor's,59.3,53.3,53.7,31,Female,White,0
+15,Master's,58.8,63.7,61.7,32,Female,Hispanic,1
+0,PhD,52.6,41.4,45.8,36,Female,Hispanic,0
+8,High School,56.8,50.5,41.4,37,Male,White,0
+5,Bachelor's,27.5,71.1,40.0,38,Male,Black,0
+15,Master's,75.3,80.3,72.4,47,Male,Black,0
+2,Bachelor's,70.9,100.0,61.4,23,Male,Black,1
+19,Bachelor's,63.7,58.3,60.0,33,Female,White,1
+3,Master's,68.6,43.2,49.4,47,Male,Hispanic,0
+18,Bachelor's,69.1,73.6,65.7,44,Male,Asian,1
+2,Bachelor's,54.1,39.7,37.4,39,Male,White,0
+18,Bachelor's,57.0,70.2,60.4,53,Female,White,1
+19,Master's,72.9,51.0,66.0,59,Female,White,1
+6,Bachelor's,68.1,63.8,52.8,24,Male,White,1
+19,High School,95.6,79.6,72.5,59,Male,Black,1
+8,Master's,89.3,58.0,65.1,24,Male,White,1
+0,High School,79.0,76.8,50.7,51,Male,White,0
+7,Master's,53.6,75.7,57.1,22,Female,Asian,0
+6,Bachelor's,56.5,26.4,37.5,51,Female,White,0
+17,PhD,50.0,43.8,59.2,53,Male,Other,1
+7,Bachelor's,69.2,31.9,44.4,49,Male,White,0
+0,Bachelor's,23.9,96.0,42.2,42,Non-binary,White,0
+10,High School,58.1,58.1,45.8,34,Male,White,0
+24,Bachelor's,60.4,92.1,73.0,48,Female,White,1
+24,Master's,42.1,30.6,53.1,57,Male,White,0
+17,PhD,77.0,49.7,70.5,28,Male,Black,0
+22,Bachelor's,47.9,74.4,61.7,43,Male,Other,1
+9,Bachelor's,69.0,63.2,55.3,31,Male,White,1
+2,Master's,100.0,69.6,67.5,60,Non-binary,Black,0
+6,Master's,40.8,37.4,40.3,36,Male,Black,0
+15,Bachelor's,62.8,84.8,64.4,36,Male,Hispanic,0
+15,Bachelor's,58.9,74.0,59.8,25,Male,White,1
+24,Bachelor's,56.0,67.2,64.0,53,Male,White,0
+19,Master's,76.4,47.7,66.2,44,Male,White,1
+16,High School,81.6,65.8,61.1,27,Male,Black,1
+1,Bachelor's,76.6,54.8,49.0,45,Female,Hispanic,0
+0,Bachelor's,54.1,30.3,33.0,41,Male,White,0
+15,Master's,100.0,59.1,74.7,58,Male,White,0
+11,High School,38.4,57.2,39.4,41,Female,Hispanic,0
+4,Bachelor's,49.5,79.1,49.3,33,Male,Hispanic,0
+4,Bachelor's,67.5,19.8,37.8,54,Female,Other,0
+22,Bachelor's,66.3,64.2,65.1,49,Male,Black,1
+8,High School,72.3,39.2,43.5,29,Female,White,0
+8,Bachelor's,88.7,65.7,62.2,22,Female,Asian,1
+2,Bachelor's,63.2,66.7,48.7,58,Female,Black,0
+18,Bachelor's,66.7,58.4,60.3,43,Non-binary,White,0
+15,Bachelor's,56.1,74.5,59.0,27,Male,Asian,0
+15,Master's,73.8,37.6,59.1,42,Non-binary,Black,0
+2,Master's,60.2,79.9,56.6,53,Male,White,1
+19,Bachelor's,60.2,47.3,55.5,56,Male,Black,0
+23,Master's,73.2,32.0,63.6,36,Male,Asian,0
+21,Bachelor's,80.5,55.1,66.5,26,Female,Other,1
+23,High School,31.9,22.3,36.3,27,Male,White,0
+0,High School,70.4,64.6,44.0,46,Female,White,0
+23,Bachelor's,60.9,55.3,61.3,61,Female,Asian,1
+19,Master's,79.2,82.2,77.6,50,Female,White,1
+10,Master's,61.2,71.7,60.9,28,Female,Black,0
+16,Master's,84.5,34.9,62.8,61,Male,Black,0
+7,Bachelor's,54.9,44.9,43.3,34,Male,White,1
+3,Bachelor's,31.5,69.4,39.2,59,Male,Asian,0
+5,High School,80.8,75.2,54.8,39,Male,Asian,0
+7,Bachelor's,52.3,82.0,53.5,23,Male,White,1
+19,Bachelor's,41.3,81.9,59.2,29,Male,Hispanic,0
+2,High School,65.2,58.4,41.9,32,Male,Hispanic,0
+15,Bachelor's,61.4,66.5,58.4,54,Non-binary,Black,1
+24,Bachelor's,77.3,83.4,76.3,59,Female,Black,1
+2,Master's,78.4,54.5,55.4,48,Male,Asian,0
+24,PhD,66.4,66.8,77.5,41,Female,Hispanic,0
+17,PhD,51.7,54.1,62.9,33,Male,Black,0
+13,Bachelor's,69.3,50.1,54.7,52,Male,Black,0
+17,Bachelor's,67.5,60.9,60.5,48,Female,Hispanic,0
+1,Bachelor's,73.5,47.6,45.8,53,Male,White,0
+21,Master's,51.9,57.6,62.2,31,Male,Hispanic,0
+2,High School,59.0,41.4,34.7,24,Non-binary,White,0
+15,Bachelor's,72.6,56.6,59.4,48,Female,White,1
+8,Master's,83.7,68.1,66.1,56,Female,White,1
+3,Bachelor's,79.5,49.4,50.0,52,Female,Other,0
+0,Bachelor's,66.2,60.2,46.2,36,Female,Hispanic,1
+3,Bachelor's,57.7,62.5,46.3,37,Male,Black,0
+0,Bachelor's,71.1,68.1,50.3,34,Male,Black,1
+13,Bachelor's,48.6,57.6,49.7,56,Male,Asian,0
+20,Bachelor's,52.7,79.5,63.3,32,Male,Hispanic,0
+15,High School,87.6,22.2,49.3,42,Female,Asian,0
+19,High School,71.0,100.0,70.0,32,Male,White,1
+23,Master's,59.8,44.3,62.6,51,Non-binary,White,0
+7,Bachelor's,77.4,67.3,57.9,56,Female,Black,0
+6,Bachelor's,84.3,43.1,52.2,43,Female,Black,0
+2,Bachelor's,58.3,71.6,48.5,59,Female,White,0
+16,PhD,58.6,65.0,67.8,52,Female,White,0
+0,Bachelor's,56.7,48.3,39.3,35,Male,Hispanic,1
+15,Bachelor's,79.5,79.3,68.6,45,Female,White,1
+11,Master's,79.6,57.0,63.8,53,Male,Black,0
+18,Master's,85.8,69.8,75.4,57,Female,Other,1
+21,Bachelor's,80.1,43.5,62.9,53,Male,White,1
+22,Master's,40.5,59.4,59.6,36,Female,White,1
+21,Bachelor's,69.2,96.1,74.8,56,Female,Black,1
+13,Bachelor's,49.1,77.3,55.8,24,Male,Hispanic,1
+5,High School,57.3,65.5,43.7,37,Male,Asian,0
+5,High School,67.6,51.9,43.2,26,Non-binary,Other,0
+12,Master's,77.5,61.2,65.1,42,Male,White,1
+18,Bachelor's,51.6,63.6,56.5,31,Female,Asian,0
+21,Bachelor's,30.1,68.1,52.8,40,Female,Black,0
+7,Master's,67.7,40.6,51.5,46,Male,Hispanic,1
+1,Master's,100.0,72.0,67.4,25,Male,White,0
+20,Bachelor's,62.0,40.4,54.8,50,Male,Hispanic,0
+0,Bachelor's,65.7,89.4,54.8,40,Female,Asian,1
+14,High School,91.7,46.1,57.1,23,Male,White,0
+0,Master's,73.9,65.3,55.5,31,Male,White,0
+4,Master's,68.3,78.1,60.5,46,Male,Hispanic,0
+15,PhD,71.6,55.5,68.7,41,Female,White,1
+18,High School,68.8,66.1,58.3,40,Female,White,0
+3,High School,47.9,85.8,44.9,44,Non-binary,White,0
+2,Bachelor's,44.9,70.2,43.4,45,Male,Hispanic,0
+16,Bachelor's,93.3,66.4,70.4,32,Female,Black,1
+16,Bachelor's,67.8,29.7,50.4,55,Female,Black,0
+11,Master's,66.5,43.2,55.0,49,Female,White,0
+13,Bachelor's,63.6,78.8,61.3,26,Female,Asian,0
+20,Bachelor's,76.7,70.3,68.9,26,Male,Asian,1
+5,Master's,100.0,73.0,70.9,42,Male,Hispanic,0
+2,Bachelor's,72.9,71.4,53.5,33,Female,Hispanic,0
+8,Master's,56.2,83.2,61.0,25,Male,White,1
+4,High School,63.0,55.3,41.8,41,Female,Black,0
+23,Bachelor's,81.1,62.2,70.4,59,Female,White,0
+16,High School,56.3,41.5,45.0,46,Male,Asian,0
+13,High School,77.8,37.0,48.7,35,Female,White,0
+20,Master's,30.2,30.4,45.7,32,Male,White,1
+2,High School,61.6,44.1,36.4,53,Male,White,0
+0,Bachelor's,74.4,87.9,57.4,32,Female,Asian,0
+19,Bachelor's,84.1,32.1,59.3,39,Female,White,0
+20,Bachelor's,52.7,54.5,55.8,48,Male,Black,0
+22,Master's,42.5,36.7,53.5,39,Male,White,0
+0,High School,61.1,49.2,36.1,44,Female,White,0
+2,Master's,48.1,63.1,47.4,32,Female,Black,0
+17,PhD,62.8,47.4,64.8,42,Female,White,1
+24,Bachelor's,64.9,79.6,70.8,26,Male,White,1
+9,PhD,45.2,87.6,64.3,44,Male,Black,1
+21,High School,77.1,19.5,49.6,62,Male,White,1
+2,Bachelor's,62.6,47.7,42.8,46,Female,White,0
+7,Bachelor's,81.2,61.1,57.4,62,Male,White,0
+13,Master's,37.3,80.3,57.5,31,Male,Hispanic,0
+23,PhD,49.7,51.8,66.3,43,Female,Asian,0
+17,Bachelor's,72.8,59.6,62.0,40,Male,Black,0
+14,Master's,53.0,39.2,51.5,22,Non-binary,Asian,1
+21,Bachelor's,62.5,32.4,53.4,28,Female,White,0
+22,Bachelor's,65.0,86.0,71.2,25,Female,White,1
+1,Bachelor's,67.4,27.2,37.6,22,Male,Black,0
+9,PhD,54.8,100.0,71.4,36,Male,White,1
+1,Bachelor's,67.2,73.1,51.2,61,Female,White,0
+16,Bachelor's,53.3,72.2,58.1,33,Female,White,1
+7,High School,75.1,70.4,53.0,43,Female,White,0
+0,Bachelor's,63.3,55.5,43.8,43,Male,Other,1
+8,Bachelor's,67.3,67.1,55.1,38,Female,White,1
+10,Bachelor's,100.0,56.6,65.0,50,Female,Asian,1
+21,Master's,48.4,70.0,64.7,35,Female,White,1
+15,Bachelor's,85.8,59.4,64.8,41,Female,Other,1
+6,Bachelor's,25.1,42.9,31.5,54,Female,White,0
+9,High School,33.8,44.3,32.3,36,Female,White,0
+22,Master's,46.4,42.3,56.5,33,Male,Black,1
+2,Master's,47.3,77.5,51.4,61,Male,Black,0
+17,High School,68.1,48.9,52.1,41,Male,White,1
+24,Master's,69.3,25.6,61.1,51,Male,White,1
+23,Bachelor's,61.2,67.1,65.0,59,Male,White,1
+12,High School,62.8,87.3,57.8,24,Male,White,0
+6,Bachelor's,72.9,73.9,57.5,49,Male,White,1
+24,Bachelor's,77.5,49.1,66.1,47,Male,Asian,1
+3,Bachelor's,45.1,31.4,32.6,51,Female,White,1
+12,PhD,59.6,57.6,62.7,34,Female,White,0
+19,Master's,64.0,57.1,64.7,34,Male,Black,0
+0,Master's,72.3,42.6,48.1,23,Female,Other,0
+7,Bachelor's,53.4,69.9,50.3,58,Female,Asian,0
+13,Bachelor's,63.7,93.2,65.7,59,Male,White,1
+15,Master's,65.4,64.0,64.1,23,Male,White,1
+13,Bachelor's,54.4,62.9,53.3,57,Male,Other,0
+11,High School,54.1,43.1,40.7,47,Female,White,0
+18,Bachelor's,66.5,85.2,68.2,32,Female,White,1
+22,Master's,63.0,58.6,67.2,29,Male,Asian,1
+14,Bachelor's,72.5,49.6,56.5,61,Male,Asian,1
+1,High School,49.2,61.1,36.3,43,Male,Asian,0
+1,Master's,59.7,68.5,52.2,41,Male,White,0
+22,Bachelor's,61.6,62.5,62.9,29,Male,White,0
+21,Bachelor's,77.2,81.7,73.3,50,Male,Other,1
+18,Bachelor's,50.9,66.9,57.3,61,Female,White,0
+24,Bachelor's,68.5,54.9,64.6,47,Female,Black,1
+21,Master's,68.8,67.2,71.0,51,Male,Black,1
+21,Bachelor's,89.7,69.0,73.9,38,Female,Asian,1
+16,Bachelor's,49.9,36.7,46.3,41,Male,White,1
+19,Master's,55.1,80.7,68.7,37,Male,White,1
+9,Master's,50.9,54.6,51.4,28,Male,Asian,1
+5,Master's,40.0,55.0,44.5,37,Female,Hispanic,0
+14,Bachelor's,91.5,73.5,70.3,48,Non-binary,Hispanic,1
+21,Bachelor's,46.4,73.4,60.1,44,Female,White,1
+10,PhD,52.8,47.4,55.7,45,Male,White,1
+4,Master's,84.7,74.5,65.2,30,Female,Hispanic,1
+0,High School,38.7,49.9,28.5,56,Male,Black,0
+7,High School,76.3,92.8,60.1,41,Female,Hispanic,1
+20,Bachelor's,43.8,45.1,49.9,58,Male,White,0
+11,Master's,83.7,64.3,67.4,38,Male,Asian,1
+11,Bachelor's,32.5,45.9,38.9,52,Female,Black,0
+4,Bachelor's,38.7,100.0,51.7,29,Female,Black,0
+6,High School,56.8,37.7,36.0,36,Male,White,0
+3,Master's,79.6,69.4,61.1,52,Female,White,0
+5,Master's,64.5,46.8,50.6,51,Male,Asian,0
+12,Bachelor's,60.0,53.6,51.7,41,Female,White,0
+19,Master's,85.2,68.2,75.5,60,Female,Asian,0
+14,PhD,97.3,82.0,84.9,33,Female,Other,1
+2,Bachelor's,75.1,89.2,59.6,38,Female,White,1
+22,Bachelor's,55.7,32.3,51.8,51,Female,Hispanic,0
+7,Bachelor's,58.7,64.8,50.6,50,Male,White,0
+19,Master's,45.7,86.3,67.1,40,Female,Black,0
+15,Bachelor's,66.5,29.7,49.2,32,Male,Other,0
+12,Bachelor's,40.6,65.7,48.5,55,Male,White,0
+17,Master's,73.3,60.0,67.3,28,Male,White,1
+9,Bachelor's,95.1,67.5,65.7,55,Male,White,1
+18,Master's,75.8,46.1,64.8,41,Female,White,1
+16,Bachelor's,58.0,34.2,48.4,59,Male,Black,0
+23,Bachelor's,72.9,25.6,56.6,45,Female,Hispanic,0
+18,Master's,89.3,77.6,78.9,31,Male,White,1
+22,Master's,88.6,79.9,82.6,53,Male,White,0
+4,Bachelor's,49.9,65.4,45.3,36,Male,White,1
+20,Master's,72.7,50.4,66.6,58,Male,Black,0
+22,Master's,62.6,30.8,58.8,41,Male,White,1
+8,Bachelor's,77.1,70.1,59.4,24,Female,Asian,1
+11,PhD,70.8,40.2,60.6,58,Male,Asian,1
+20,High School,29.5,47.2,40.5,61,Female,Asian,0
+0,Bachelor's,59.8,49.4,40.7,29,Male,White,1
+0,Bachelor's,68.0,56.4,45.7,61,Male,Black,0
+14,Master's,43.5,46.3,50.3,44,Female,White,0
+1,Master's,73.7,60.6,54.8,61,Male,White,0
+21,Bachelor's,42.1,48.8,51.2,32,Male,Hispanic,1
+15,Bachelor's,53.0,72.6,57.3,29,Male,Black,0
+24,Bachelor's,85.1,78.6,77.6,50,Male,White,1
+7,High School,51.7,62.0,42.3,51,Female,White,1
+12,Master's,73.6,68.3,65.8,31,Male,White,1
+20,Master's,38.7,98.1,69.0,60,Female,White,0
+0,Bachelor's,96.2,38.9,50.3,49,Female,White,0
+15,PhD,60.4,37.8,59.5,57,Male,White,1
+6,Bachelor's,66.4,72.5,54.8,34,Female,Asian,0
+4,PhD,67.7,95.0,70.4,53,Male,Black,1
+21,Master's,74.1,55.3,69.3,57,Non-binary,Asian,0
+22,Bachelor's,42.2,91.1,64.7,58,Male,Black,0
+2,Bachelor's,64.9,61.7,47.8,47,Female,White,0
+11,Master's,55.1,47.7,52.4,43,Male,Other,1
+15,Bachelor's,39.7,42.2,43.6,25,Male,Hispanic,0
+18,Bachelor's,79.8,71.3,68.7,52,Female,Hispanic,0
+4,High School,59.7,43.5,37.1,39,Female,Hispanic,0
+21,Bachelor's,68.6,61.5,64.3,59,Male,Hispanic,0
+24,Bachelor's,67.7,88.5,74.4,45,Male,Asian,0
+13,Master's,60.0,54.5,57.7,44,Female,White,0
+4,Master's,94.6,83.7,71.4,43,Female,Asian,1
+14,High School,64.3,38.1,45.1,23,Non-binary,Black,0
+16,Master's,41.6,50.4,52.5,52,Female,Black,0
+13,Bachelor's,59.0,34.7,46.5,32,Female,Asian,0
+19,Master's,72.5,61.3,69.0,49,Female,White,0
+4,Master's,73.0,74.0,61.0,53,Male,White,0
+11,Bachelor's,48.7,61.4,49.3,26,Male,Hispanic,1
+15,Master's,78.9,82.1,74.2,59,Female,Asian,1
+15,Bachelor's,38.6,46.5,44.5,31,Female,Asian,0
+20,Bachelor's,82.2,64.1,69.0,61,Male,White,1
